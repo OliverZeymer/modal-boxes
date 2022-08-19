@@ -1,10 +1,7 @@
-import { useContext } from "react";
-import popupContext from "../contexts/popupContext";
-const ConfirmButton = (props) => {
-  const { popup, setPopup } = useContext(popupContext);
+const ConfirmButton = ({ show, setShow, value }) => {
   return (
-    <button className="button mx-auto my-6" onClick={() => setPopup(!popup)}>
-      {props.value}
+    <button className="button mx-auto my-6" onClick={() => setShow(!show)}>
+      {value}
     </button>
   );
 };
